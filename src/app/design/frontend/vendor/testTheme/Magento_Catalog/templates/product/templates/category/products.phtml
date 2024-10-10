@@ -1,0 +1,13 @@
+<?php
+/**
+ * Category view template
+ *
+ * @var $block \Magento\Catalog\Block\Category\View
+ */
+?>
+<?php if (!$block->isContentMode() || $block->isMixedMode()) :?>
+    <?= $block->getLayout()->createBlock('Magento\Theme\Block\Html\Title')->setTemplate('Magento_Theme::html/title.phtml')->toHtml(); ?>
+    
+    <?= $block->getProductListHtml() ?>
+<?php endif; ?>
+
